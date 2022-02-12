@@ -1,0 +1,16 @@
+.j-header-1{
+  padding: 14px 0px;
+  padding-left: 7%;
+  padding-right: 7%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+  .genric-btn {
+    &:hover {
+      color: $white!important;
+    }
+  }
+}

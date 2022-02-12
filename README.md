@@ -1,6 +1,6 @@
 # csadproject
 
-##client (frontend)
+## client (frontend)
 
 If doesn't work, try these steps.
 
@@ -11,7 +11,7 @@ If doesn't work, try these steps.
 5.  put .env file and inside put ```SKIP_PREFLIGHT_CHECK=true```
 
 
-##database (backend)
+## database (backend)
 If doesn't work,
 1. Remove node_modules and package-lock.json
 2. ```npm install mysql express```

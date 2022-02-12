@@ -13,6 +13,17 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Contacted = (props) => {
   //const [result,showResult] = useState(false);
 
+  const sendFeedback = () =>{
+    axios.post('http://localhost:3001/create',{
+      name: name,
+      email:email,
+      subject:subject,
+      message:message,
+      }).then(() =>{
+        console.log("success");
+      });
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -132,6 +143,7 @@ const Contacted = (props) => {
                       />
                       <div className="d-flex flex-column">
                         <button
+                          onClick={sendFeedback}
                           type="submit"
                           className="genric-btn2 d-block mt-30 mr-0 ml-auto"
                         >

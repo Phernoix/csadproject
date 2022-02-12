@@ -37,8 +37,8 @@ const AboutUs = () => {
           >
             <div className="col-lg-6 content-wrap">
               <h1>
-                We are the one
-                <br /> Who place idea on table
+                We are the ones
+                <br /> Who place ideas on the table
               </h1>
               <p>
                 We can provide staffing, software and hardware solutions

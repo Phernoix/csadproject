@@ -12,6 +12,23 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Contacted = (props) => {
   //const [result,showResult] = useState(false);
+  const [name,setName] = useState("");
+  const [email,setEmail] = useState("");
+  const [subject,setSubject] = useState("");
+  const [message,setMessage] = useState("");
+
+  
+
+  const sendFeedback = () =>{ //for getting feedbacks into database
+    axios.post('http://localhost:3001/create',{
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+      }).then(() =>{
+        console.log("success");
+      });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -70,13 +87,7 @@ const Contacted = (props) => {
                   }}
                 >
                   {({
-                    values,
-                    errors,
-                    touched,
-                    handleChange,
-                    handleBlur,
-                    handleSubmit,
-                    isSubmitting,
+
                   }) => (
                     <form
                       //onSubmit={handleSubmit}
@@ -85,15 +96,17 @@ const Contacted = (props) => {
                       id="myForm"
                       action="mail"
                       method="post"
-                    >
+                    > 
                       <input
                         name="name"
                         autoComplete="name"
                         placeholder="Enter your name"
                         className="common-input mb-20 form-control"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.name}
+                        onChange={(event)=> {
+                          setName(event.target.value);
+                          }}
+                        //onBlur={handleBlur}
+                        //value={values.name}
                         required
                         type="text"
                       />
@@ -101,9 +114,11 @@ const Contacted = (props) => {
                         placeholder="Enter email address"
                         type="email"
                         name="email"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.email}
+                        onChange={(event)=> {
+                          setEmail(event.target.value);
+                          }}
+                        //onBlur={handleBlur}
+                        //value={values.email}
                         className="common-input mb-20 form-control"
                         required
                       />
@@ -112,9 +127,11 @@ const Contacted = (props) => {
                         autoComplete="subject"
                         placeholder="Enter subject"
                         className="common-input mb-20 form-control"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.subject}
+                        onChange={(event)=> {
+                          setSubject(event.target.value);
+                          }}
+                        //onBlur={handleBlur}
+                        //value={values.subject}
                         required
                         type="text"
                       />
@@ -126,12 +143,15 @@ const Contacted = (props) => {
                         autoComplete="message"
                         placeholder="Enter Message"
                         required
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.message}
+                        onChange={(event)=> {
+                          setMessage(event.target.value);
+                          }}
+                        //onBlur={handleBlur}
+                        //value={values.message}
                       />
                       <div className="d-flex flex-column">
                         <button
+                          onClick={sendFeedback}
                           type="submit"
                           className="genric-btn2 d-block mt-30 mr-0 ml-auto"
                         >

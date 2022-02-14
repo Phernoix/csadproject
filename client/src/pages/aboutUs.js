@@ -38,13 +38,13 @@ const AboutUs = () => {
             <div className="col-lg-6 content-wrap">
               <h1>
                 We are the one
-                <br /> Who place idea on table
+                <br /> who place ideas on the table
               </h1>
               <p>
-                We can provide staffing, software and hardware solutions
-                tailored to your needs as we have worked in Europe for many
-                years. We understand the customer challenges and strive to
-                optimise our business model to suite the customers.
+                We are a group of Singapore Polytechnic students
+                who made this website as part of their CSAD Module.
+                Have fun navigating and marking our website.
+
               </p>
             </div>
           </div>

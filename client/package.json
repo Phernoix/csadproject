@@ -22,6 +22,7 @@
     "react-modal-video": "^1.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.0",
+    "react-stars": "^2.2.5",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

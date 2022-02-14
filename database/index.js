@@ -18,9 +18,10 @@ app.post('/create', (req,res) =>{
     const email = req.body.email;
     const subject = req.body.subject;
     const message = req.body.message;
+    const rating =req.body.rating;
 
-    db.query('INSERT INTO feedback (name,email,subject,message) VALUES(?,?,?,?)',
-    [name,email,subject,message],
+    db.query('INSERT INTO feedback (name,email,subject,message,rating) VALUES(?,?,?,?,?)',
+    [name,email,subject,message,rating],
      (err,result) => {
          if (err){
              console.log(err)
@@ -30,6 +31,7 @@ app.post('/create', (req,res) =>{
      }
     );
 });
+
 
 app.listen(3001,()=>{
     console.log("YES PORT 3001");   

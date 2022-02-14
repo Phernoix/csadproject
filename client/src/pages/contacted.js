@@ -8,6 +8,7 @@ import Footer from "../components/footer";
 import axios from "axios";
 import { Formik } from "formik";
 import Example from "../components/alert";
+import ReactStars from 'react-stars'
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Contacted = (props) => {
@@ -16,6 +17,10 @@ const Contacted = (props) => {
   const [email,setEmail] = useState("");
   const [subject,setSubject] = useState("");
   const [message,setMessage] = useState("");
+  const ratingChanged = (newRating) => {
+   console.log(newRating)
+  }
+  const [rating,setRating] = useState("");
 
   
 
@@ -25,6 +30,7 @@ const Contacted = (props) => {
       email: email,
       subject: subject,
       message:message,
+      rating:rating,
       }).then(() =>{
         console.log("success");
       });
@@ -146,9 +152,26 @@ const Contacted = (props) => {
                         onChange={(event)=> {
                           setMessage(event.target.value);
                           }}
+                          
                         //onBlur={handleBlur}
                         //value={values.message}
                       />
+                      <br></br>
+                      <div align="left">
+                        <h6>
+                          Rating:
+                        </h6>
+                      </div>
+                      <ReactStars
+                        count={5}
+                        //onChange={ratingChanged}
+                        size={24}
+                        color2={'#ffd700'}
+                        name="rating"
+                        onChange={(ratingChanged)=> {
+                          setRating(ratingChanged);
+                          }}
+                           />
                       <div className="d-flex flex-column">
                         <button
                           onClick={sendFeedback}

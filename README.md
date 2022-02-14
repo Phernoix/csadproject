@@ -15,4 +15,5 @@ If doesn't work, try these steps.
 If doesn't work,
 1. Remove node_modules and package-lock.json
 2. ```npm install mysql express```
+
 ALWAYS DO '''node index.js''' WHENEVER YOU MAKE CHANGES TO THE INDEX.JS

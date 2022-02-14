@@ -24,7 +24,7 @@ const Contacted = (props) => {
       name: name,
       email: email,
       subject: subject,
-      message: message,
+      message:message,
       }).then(() =>{
         console.log("success");
       });

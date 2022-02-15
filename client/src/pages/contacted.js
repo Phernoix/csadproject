@@ -21,6 +21,7 @@ const Contacted = (props) => {
    console.log(newRating)
   }
   const [rating,setRating] = useState("");
+  
 
   
 
@@ -162,6 +163,8 @@ const Contacted = (props) => {
                           Rating:
                         </h6>
                       </div>
+                    
+          
                       <ReactStars
                         count={5}
                         //onChange={ratingChanged}

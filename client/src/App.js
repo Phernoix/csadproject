@@ -11,14 +11,18 @@ import Subscribe from "./pages/subscribe";
 import Subscribed from "./pages/subscribed";
 import TranslateToDe from "./pages/TranslateToDe";
 import TranslateToEn from "./pages/TranslateToEn";
+import Upload from "./pages/upload";
 import Home from "./pages/home";
+import LoginPage from "./pages/logincard";
 import "./header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ReactComponent as CloseMenu } from "./assets/image/menu.svg";
 import { ReactComponent as MenuIcon } from "./assets/image/menu.svg";
 //import logo from "./assets/image/kmtec_logo.jpeg";
 import logo from "./assets/image/csadlogo.jpg";
+import Signup from "./pages/signup";
 //import Footer from './footer';
+
 
 export default function App() {
   const [click, setClick] = useState(false);
@@ -93,9 +97,16 @@ export default function App() {
                 </Link>
               </li>
               <li className="option" onClick={closeMobileMenu}>
-                <Link to={"/subscribed"}>
+                <Link to={"/upload"}>
                   <p class="text-dark">
-                    <h6>Subscribe</h6>
+                    <h6>Upload</h6>
+                  </p>
+                </Link>
+              </li>
+              <li className="option" onClick={closeMobileMenu}>
+                <Link to={"/logincard"}>
+                  <p class="text-dark">
+                    <h6>Login</h6>
                   </p>
                 </Link>
               </li>
@@ -138,8 +149,11 @@ export default function App() {
         <Route exact path="/contacted" component={Contacted} />
         <Route exact path="/subscribe" component={Subscribe} />
         <Route exact path="/subscribed" component={Subscribed} />
+        <Route exact path="/logincard" component={LoginPage} />
+        <Route exact path="/signup" component={Signup} />
         <Route exact path="/TranslateToDe" component={TranslateToDe} />
         <Route exact path="/TranslateToEn" component={TranslateToEn} />
+        <Route exact path="/upload" component={Upload} />
       </Switch>
     </Router>
   );

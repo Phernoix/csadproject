@@ -1,6 +1,6 @@
 import React, {Fragment,useState} from 'react';
 import ReactDOM from 'react-dom';
-import axios, {post} from "axios";
+import axios from "axios";
 import Message from './message.js';
 import Progress from './progress.js';
 
@@ -22,7 +22,7 @@ const FileUpload = () => {
       formData.append('file', file);
   
       try {
-        const res = await axios.post('/sendImage', formData, {
+        const res = await axios.post('http://localhost:3001/sendImage', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           },

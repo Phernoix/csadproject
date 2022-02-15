@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const cors = require("cors");
+const fileUpload = require('express-fileupload');
 
 app.use(cors());
 app.use(express.json());
@@ -76,7 +77,7 @@ app.post('/sendImage', (req, res) => {
   
     const file = req.files.file;
   
-    file.mv(`${__dirname}/database/uploads/${file.name}`, err => {
+    file.mv(`${__dirname}/uploads/${file.name}`, err => {
       if (err) {
         console.error(err);
         return res.status(500).send(err);

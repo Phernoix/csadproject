@@ -20,7 +20,7 @@ const Anm = () => {
   const[announcements, setannouncements] = useState("");
 
   const sqlanm = () =>{
-      axios.post("http://localhost:3001/create", {
+      axios.post("http://localhost:3001/loga", {
           announcements:announcements,
       }).then((response) =>{
           console.log(response);
@@ -48,20 +48,20 @@ const Anm = () => {
             style={fullscreen}
             //style={"height: 800px"}
           >
-            <div className="col-lg-6 content-wrap">
-              <h1>
-                We are the one
-                <br /> who place ideas on the table
-              </h1>
-              <button onClick={sqlanm}>
-                  Submit
-
-              </button>
-
+              <div>
               <h1>
                   {announcements}
+                  
               </h1>
-        
+              
+              </div>
+              
+              
+            <div>
+              <button align = "left" onClick={sqlanm}>
+              Click
+              </button>
+
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Anm = () => {
                 <img className="card-top-img" src={Fazith} />
                 <div className="card-body">
 
-                    
+            
                   <span>
                     <h4 className="card-title mb-15">Fazith</h4>
                   </span>

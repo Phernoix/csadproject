@@ -32,6 +32,25 @@ app.post('/create', (req,res) =>{
     );
 });
 
+app.post('/create', (req,res) =>{
+    const announcements = req.body.announcements;
+
+    db.query('SELECT * FROM csad_proj.announcements WHERE id = 1',
+    [announcements],
+     (err,result) => {
+         if (err){
+             res.send({err: err})
+         }
+             
+            if (result){
+                 res.send(result)
+             } else {
+                 res.send({message: "No announcement found"})
+             }
+         }
+    );
+});
+
 
 app.listen(3001,()=>{
     console.log("YES PORT 3001");   

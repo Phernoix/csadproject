@@ -13,8 +13,9 @@ import TranslateToDe from "./pages/TranslateToDe";
 import TranslateToEn from "./pages/TranslateToEn";
 import Home from "./pages/home";
 import Anm from "./pages/announcements";
-import Stocks from "./pages/stocks";
-import { Stocks } from "./stocks";
+import Stocks from "./components/stocks.js";
+import Covid from "./pages/covid";
+//import { Stocks } from "./stocks";
 import "./header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ReactComponent as CloseMenu } from "./assets/image/menu.svg";
@@ -22,18 +23,6 @@ import { ReactComponent as MenuIcon } from "./assets/image/menu.svg";
 //import logo from "./assets/image/kmtec_logo.jpeg";
 import logo from "./assets/image/csadlogo.jpg";
 //import Footer from './footer';
-
-```css
-table {
-  display: flex;
-  justify-content: center;
-  border: 1px solid gray;
-}
-td {
-  border: 1px solid gray;
-  width: 30em;
-}
-```
 
 export default function App() {
   const [click, setClick] = useState(false);
@@ -116,9 +105,9 @@ export default function App() {
                 </Link>
               </li>
               <li className="option" onClick={closeMobileMenu}>
-                <Link to={"/stocks"}>
+                <Link to={"/covid"}>
                   <p class="text-dark">
-                    <h6>stocks</h6>
+                    <h6>Covid</h6>
                   </p>
                 </Link>
               </li>
@@ -150,9 +139,6 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="App">
-      <Stocks />
-      </div>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
@@ -167,7 +153,7 @@ export default function App() {
         <Route exact path="/TranslateToDe" component={TranslateToDe} />
         <Route exact path="/TranslateToEn" component={TranslateToEn} />
         <Route exact path="/announcements" component={Anm} />
-        <Route exact path="/stocks" component={Stocks} />
+        <Route exact path="/covid" component={Covid} />
       </Switch>
     </Router>
 

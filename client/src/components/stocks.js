@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
-import { JsonData } from "./data";
+//import "./App.css";
+import { JsonData } from "../data";
 
 export const Stocks = () => {
     return (
@@ -9,9 +9,12 @@ export const Stocks = () => {
           {JsonData.map((data, key) => {
             return (
               <div key={key}>
-                {data.warning +
-                  " , " +
-                  data.safetymeasure}
+                <Stock
+                  key={key}
+                  warning={data.warning}
+                  safetymeasure={data.safetymeasure}
+
+                />
               </div>
             );
           })}
@@ -19,7 +22,7 @@ export const Stocks = () => {
       </>
     );
   };
-
+export default Stocks;
   const HomePageHeader = () => {
     return (
       <header className="header">
@@ -28,7 +31,7 @@ export const Stocks = () => {
     );
   };
 
-  ```js
+
 const Stock = ({warning,safetymeasure}) => {
   if (!warning) return <div />;
   return (
@@ -46,27 +49,3 @@ const Stock = ({warning,safetymeasure}) => {
     </table>
   );
 };
-```
-
-```js
-export const Stocks = () => {
-  return (
-    <>
-      <HomePageHeader />
-      <div className="stock-container">
-        {stockData.map((data, key) => {
-          return (
-            <div key={key}>
-              <Stock
-                key={key}
-                warning={data.warning}
-                safetymeasure={data.safetymeasure}
-              />
-            </div>
-          );
-        })}
-      </div>
-    </>
-  );
-};
-```

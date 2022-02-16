@@ -227,8 +227,6 @@ app.post("/sendImage", (req, res) => {
   //) 
 });
 
-app.listen(3001, () => {
-  console.log("YES PORT 3001");
 app.post('/log', (req,res) =>{
     const announcements = req.body.announcements;
 
@@ -247,7 +245,7 @@ app.post('/log', (req,res) =>{
          }
     );
 });
-});
+
 
 
 app.listen(3001,()=>{

@@ -57,8 +57,8 @@ const Map = () => {
                   <span className="lnr lnr-phone-handset" />
                 </div>
                 <div className="desc">
-                  <a href="tel:00(440)98655629865">
-                    <h4>87546423</h4>
+                  <a href="tel:+6591452848">
+                    <h4>91452848</h4>
                   </a>
                   <p>Mon to Fri 9am to 6 pm</p>
                 </div>
@@ -68,7 +68,7 @@ const Map = () => {
                   <span className="lnr lnr-envelope" />
                 </div>
                 <div className="desc">
-                  <h4>fazithismail@gmail.com</h4>
+                  <h4>CSAD Group 3</h4>
                   <p>Send us your query anytime!</p>
                 </div>
               </div>

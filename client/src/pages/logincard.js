@@ -5,6 +5,7 @@ import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import loginIcon from "../assets/image/logo.svg";
 import uiImg from "../assets/image/logined.svg";
 import './login.css';
+import Footer from '../components/footer';
 
 const LoginPage = () => {
     const [username,setUsername] = useState("");
@@ -78,6 +79,7 @@ const LoginPage = () => {
                     </h4>
                 </Alert>
             </Container>
+            <Footer />
         </>
     );
 };

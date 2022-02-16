@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import FileUpload from '../components/fileUpload.js';
 import Footer from '../components/footer.js';
+import Sqlannounce from '../components/sqlannounce.js';
 
 const Upload = () => {
     return(
     <div>
+    <Sqlannounce />
     <div className='container mt-4'>
     <h4 className='display-4 text-center mb-4'>
       <i className='fab fa-react' /> Challenge of the day:

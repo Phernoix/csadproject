@@ -5,6 +5,7 @@ import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import loginIcon from "../assets/image/logo.svg";
 import uiImg from "../assets/image/logined.svg";
 import './login.css';
+import Footer from '../components/footer';
 
 const UpdateProfile = () => {
     const [usernameReg,setUsernameReg] = useState("");
@@ -78,6 +79,7 @@ const UpdateProfile = () => {
                     </h4>
                 </Alert>
             </Container>
+            <Footer />
         </>
     );
 };

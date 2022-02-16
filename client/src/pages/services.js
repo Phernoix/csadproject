@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ServiceImg from "./../assets/img/mockup.png";
+import Mockup from "./../assets/img/mockup2.png";
+import Vig from "./../assets/img/vig.png";
 import SoftwareImg from "./../assets/img/feature/i1.png";
 import EmbeddedImg from "./../assets/img/feature/i4.png";
 import InternetImg from "./../assets/img/feature/i3.png";
@@ -8,6 +10,8 @@ import AboutImg from "../assets/img/about-img.png";
 import StaffingImg from "../assets/img/stat/s5.png";
 import SolutionsImg from "../assets/img/stat/s3.png";
 import AnalyticsImg from "../assets/img/stat/s2.png";
+import Example from "../components/graph";
+import Graphed from "../components/graph";
 
 const Services = () => {
   const [fullscreen, setFullscreen] = useState({
@@ -31,201 +35,61 @@ const Services = () => {
             <div className="col-lg-4 content-wrap">
               <h1>Welcome to Project Vigor</h1>
               <p>
-                We the founders and managing directors of this company
-                themselves come from engineering background, we understand your
-                requirements and can provide best solutions to your business
-                needs.
+                The physical health of Singaporeans is a priority for the nation
+                with the ongoing pandemic and the prevalence of chronic diseases
+                due to unhealthy lifestyles. Not only that, with an increasing
+                focus on mental health issues, there is a need for solutions to
+                enable Singaporeans to lead a healthier lifestyle with equal
+                consideration for physical and mental wellbeing.
               </p>
             </div>
+            <Graphed />
           </div>
         </div>
-        <div className="pt-5">
+        <div className="pt-4">
           <img
-            className="hero-img"
-            src={ServiceImg}
+            align="right"
+            //className="hero-img"
+            src={Mockup}
             alt=""
             style={{ width: "auto" }}
           />
         </div>
-      </section>
-      <section className="feature-section">
+
         <div className="container">
-          <div className="row feature-left-wrapr">
-            <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={39}
-                      height={40}
-                      src={SoftwareImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>Software solutions</h4>
-                  <p className="mb-0">
-                    Our company provides software solutions tailored exactly to
-                    your requirements. We have also have a pool of consultants
-                    working on in house projects off shore who could prove to be
-                    an valuable resource to your company needs.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="col-lg-4 content-wrap">
+            <h1>The Challenge</h1>
+            <h3>
+              How can we develop an app that will improve Singaporean’s physical
+              and mental health given the current pandemic?
+            </h3>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
 
-            <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={40}
-                      height={36}
-                      src={InternetImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>Internet of Things Solutions</h4>
-                  <p className="mb-0">
-                    We have developed IoT products installed for many customers
-                    to the best standards. Tank leak detection system , Water
-                    tank monitoring system are some of the products our company
-                    developed with our specialists and installed for many
-                    customers.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={40}
-                      height={40}
-                      src={EmbeddedImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>Embedded Solutions</h4>
-                  <p className="mb-0">
-                    Providing consultancy helping your company develop your
-                    products be it in design phase or development phase. We
-                    understand the technical details as our consultants have
-                    worked for many global clients in Germany and UK.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/*             <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={40}
-                      height={36}
-                      src={InternetImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>Internet of Things Solutions</h4>
-                  <p className="mb-0">
-                    We have developed IoT products installed for many customers
-                    to the best standards. Tank leak detection system , Water
-                    tank monitoring system are some of the products our company
-                    developed with our specialists and installed for many
-                    customers.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-            <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={40}
-                      height={36}
-                      src={InternetImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>Computer Vision</h4>
-                  <p className="mb-0">
-                    We have developed IoT products installed for many customers
-                    to the best standards. Tank leak detection system , Water
-                    tank monitoring system are some of the products our company
-                    developed with our specialists and installed for many
-                    customers.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={40}
-                      height={36}
-                      src={InternetImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>PLM/ALM Consultancy</h4>
-                  <p className="mb-0">
-                    We have developed IoT products installed for many customers
-                    to the best standards. Tank leak detection system , Water
-                    tank monitoring system are some of the products our company
-                    developed with our specialists and installed for many
-                    customers.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="single-feature aquablue-bg m-0">
-                <div className="icon">
-                  <span>
-                    <img
-                      width={40}
-                      height={36}
-                      src={InternetImg}
-                      className="attachment-image_icon_40x40 size-image_icon_40x40"
-                      alt=""
-                    />
-                  </span>
-                </div>
-                <div className="desc">
-                  <h4>Product/Project Management</h4>
-                  <p className="mb-0">
-                    We have developed IoT products installed for many customers
-                    to the best standards. Tank leak detection system , Water
-                    tank monitoring system are some of the products our company
-                    developed with our specialists and installed for many
-                    customers.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="container">
+          <div className="col-lg-4 content-wrap">
+            <h1>Our Solution</h1>
+            <h3>
+              An app that rewards the user with a certain amount of crypto
+              currency for every step the user walks.
+            </h3>
+          </div>
+          <div className="pt-4">
+            <a
+              href="https://kovan.etherscan.io/address/0x46715a53e5654aaa2258b57affb9b5c2daf2612d"
+              target="_blank"
+            >
+              <img
+                align="right"
+                //className="hero-img"
+                src={Vig}
+                alt=""
+                style={{ width: "auto" }}
+              />
+            </a>
           </div>
         </div>
       </section>

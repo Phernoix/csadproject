@@ -6,36 +6,27 @@ import loginIcon from "../assets/image/logo.svg";
 import uiImg from "../assets/image/logined.svg";
 import './login.css';
 
-const LoginPage = () => {
-    const [username,setUsername] = useState("");
-    const [password,setPassword] = useState("");
+const DeleteProfile = () => {
+    const [usernameReg,setUsernameReg] = useState("");
+    const [passwordReg,setPasswordReg] = useState("");
+    const[DeleteStatus,setDeleteStatus] = useState("");
 
-    const[LoginStatus,setLoginStatus] = useState("");
 
-    axios.defaults.withCredentials = true;
-
-    const login = () => {
-        axios.post('http://localhost:3001/login',
+    const deleted = () => {
+        axios.post('http://localhost:3001/deleted',
         {
-            username:username, 
-            password:password,
+            username:usernameReg, 
+            password:passwordReg,
         }).then((response) => {
-
             if(response.data.message){
-                setLoginStatus(response.data.message)
+                setDeleteStatus(response.data.message)
             } else{
-                setLoginStatus(response.data[0].username)
+                setDeleteStatus(response.data.message)
             }
+            console.log(response);
         })
     };
 
-    useEffect(() => {
-        axios.get("http://localhost:3001/login").then((response) => {
-            if(response.data.loggedIn == true){
-                setLoginStatus("Your username: " + response.data.user[0].username);
-            }
-        })
-    }, [])
 
     return (
         <>
@@ -46,22 +37,22 @@ const LoginPage = () => {
                         <Form>
                             <Form.Group >
                                 <Form.Control type="username" placeholder="Enter username" 
-                                onChange={(e)=>{setUsername(e.target.value);}}
+                                onChange={(e)=>{setUsernameReg(e.target.value);}}
                                 />
-                            </Form.Group>
+                            </Form.Group> 
 
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Control type="password" placeholder="Password" 
-                                onChange={(e)=>{setPassword(e.target.value);}}
+                                onChange={(e)=>{setPasswordReg(e.target.value);}}
                                 />
-                            </Form.Group>
+                            </Form.Group> 
 
-                            <Button variant="primary btn-block" onClick={login}>Login</Button>
+                            <Button variant="primary btn-block" onClick={deleted}>DELETE</Button>
 
                             <div className="text-left mt-3">
-                                <a href="/signup"><small className="reset">Sign Up</small></a> II
-                                <a href="/updateprofile"><small className="reset ml-2">Update Profile</small></a> II
-                                <a href="/deleteprofile"><small className="reset"> Delete Profile</small></a>
+                                <a href="/logincard"><small className="reset">Login</small></a> II
+                                <a href="/updateprofile"><small className="reset ml-2">Update Profile</small></a> II 
+                                <a href="/signup"><small className="reset"> Sign Up</small></a> 
                             </div>
                         </Form>
                     </Col>
@@ -74,7 +65,7 @@ const LoginPage = () => {
                     <Alert.Heading>Account Status</Alert.Heading>
                     <hr />
                         <h4>
-                        {LoginStatus}
+                        {DeleteStatus}
                     </h4>
                 </Alert>
             </Container>
@@ -82,4 +73,4 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default DeleteProfile;

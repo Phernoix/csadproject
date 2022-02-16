@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Alert} from "react-bootstrap";
 import axios from 'axios';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import loginIcon from "../assets/image/logo.svg";
@@ -8,6 +9,7 @@ import './login.css';
 const Signup = () => {
     const [usernameReg,setUsernameReg] = useState("");
     const [passwordReg,setPasswordReg] = useState("");
+    const[SignStatus,setSignStatus] = useState("");
 
 
     const register = () => {
@@ -16,6 +18,11 @@ const Signup = () => {
             username:usernameReg, 
             password:passwordReg,
         }).then((response) => {
+            if(response.data.message){
+                setSignStatus(response.data.message)
+            } else{
+                setSignStatus(response.data.message)
+            }
             console.log(response);
         })
     };
@@ -44,7 +51,8 @@ const Signup = () => {
 
                             <div className="text-left mt-3">
                                 <a href="/logincard"><small className="reset">Login</small></a> II
-                                <a href="#"><small className="reset ml-2">Quick Recover</small></a>
+                                <a href="/updateprofile"><small className="reset ml-2">Update Profile</small></a> II
+                                <a href="/deleteprofile"><small className="reset"> Delete Profile</small></a>
                             </div>
                         </Form>
                     </Col>
@@ -53,6 +61,13 @@ const Signup = () => {
                         <img className="w-100" src={uiImg} alt=""/>
                     </Col>
                 </Row>
+                <Alert variant="secondary">
+                    <Alert.Heading>Account Status</Alert.Heading>
+                    <hr />
+                        <h4>
+                        {SignStatus}
+                    </h4>
+                </Alert>
             </Container>
         </>
     );

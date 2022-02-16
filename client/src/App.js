@@ -20,6 +20,8 @@ import { ReactComponent as MenuIcon } from "./assets/image/menu.svg";
 //import logo from "./assets/image/kmtec_logo.jpeg";
 import logo from "./assets/image/csadlogo.jpg";
 import Signup from "./pages/signup";
+import UpdateProfile from "./pages/updateprofile";
+import DeleteProfile from "./pages/deleteprofile";
 //import Footer from './footer';
 
 export default function App() {
@@ -97,7 +99,7 @@ export default function App() {
               <li className="option" onClick={closeMobileMenu}>
                 <Link to={"/logincard"}>
                   <p class="text-dark">
-                    <h6>Login</h6>
+                    <h6>Account</h6>
                   </p>
                 </Link>
               </li>
@@ -142,6 +144,8 @@ export default function App() {
         <Route exact path="/subscribed" component={Subscribed} />
         <Route exact path="/logincard" component={LoginPage} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/updateprofile" component={UpdateProfile} />
+        <Route exact path="/deleteprofile" component={DeleteProfile} />
         <Route exact path="/TranslateToDe" component={TranslateToDe} />
         <Route exact path="/TranslateToEn" component={TranslateToEn} />
       </Switch>

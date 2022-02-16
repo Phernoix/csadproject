@@ -9,6 +9,7 @@ import Blog3 from "./../assets/img/blog/blog3.jpg";
 import Blog4 from "./../assets/img/blog/blog4.jpg";
 import Blog5 from "./../assets/img/blog/blog5.jpg";
 import Blog6 from "./../assets/img/blog/blog6.jpg";
+import Blog7 from "./../assets/img/blog/blog7.jpg";
 import Fit1 from "./../assets/img/carusel/fit1.png";
 import "./carousel.css";
 
@@ -34,6 +35,13 @@ const CarouselContainer = () => {
         <Carousel.Caption mb-4>
           <h3>Singapore's health and welness</h3>
           <p>Health and wellness is key</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={2000}>
+        <img className="d-block w-100" src={Blog7} alt="Fourth slide" />
+        <Carousel.Caption mb-4>
+          <h3>Find out how to get fit!</h3>
+          <p>Remember to work out at least 150 minutes a week!</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

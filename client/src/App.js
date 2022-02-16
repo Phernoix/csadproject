@@ -25,7 +25,6 @@ import UpdateProfile from "./pages/updateprofile";
 import DeleteProfile from "./pages/deleteprofile";
 //import Footer from './footer';
 
-
 export default function App() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);

@@ -31,6 +31,7 @@ export default function App() {
   const closeMobileMenu = () => setClick(false);
 
   return (
+    
     <Router>
       <div className="container-fluid">
         <div className="row align-items-center justify-content-between">
@@ -91,6 +92,7 @@ export default function App() {
                   </p>
                 </Link>
               </li>
+             
               <li className="option" onClick={closeMobileMenu}>
                 <Link to={"/logincard"}>
                   <p class="text-dark">
@@ -146,6 +148,8 @@ export default function App() {
         <Route exact path="/upload" component={Upload} />
       </Switch>
     </Router>
+
+    
   );
 }
 

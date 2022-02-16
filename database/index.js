@@ -229,4 +229,27 @@ app.post("/sendImage", (req, res) => {
 
 app.listen(3001, () => {
   console.log("YES PORT 3001");
+app.post('/log', (req,res) =>{
+    const announcements = req.body.announcements;
+
+    db.query('SELECT * FROM announcements WHERE id = 1',
+    [announcements],
+     (err,result) => {
+         if (err){
+             res.send({err: err})
+         }
+             
+            if (result){
+                 res.send(result)
+             } else {
+                 res.send({message: "No announcement found"})
+             }
+         }
+    );
+});
+});
+
+
+app.listen(3001,()=>{
+    console.log("YES PORT 3001");   
 });

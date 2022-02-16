@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AboutImg from "../assets/img/about-img.png";
+import AboutImg from "../assets/img/about3.png";
 import StaffingImg from "../assets/img/stat/s5.png";
 import SolutionsImg from "../assets/img/stat/s3.png";
 import AnalyticsImg from "../assets/img/stat/s2.png";
@@ -10,6 +10,7 @@ import Footer from "../components/footer";
 import Blog1 from "./../assets/img/blog/blog1.jpg";
 import Blog2 from "./../assets/img/blog/blog2.jpg";
 import Blog3 from "./../assets/img/blog/blog3.jpg";
+import Blog4 from "./../assets/img/blog/blog4.png";
 
 const AboutUs = () => {
   const [fullscreen, setFullscreen] = useState({
@@ -41,10 +42,9 @@ const AboutUs = () => {
                 <br /> who place ideas on the table
               </h1>
               <p>
-                We are a group of Singapore Polytechnic students
-                who made this website as part of their CSAD Module.
-                Have fun navigating and marking our website.
-
+                We are a group of Singapore Polytechnic students who made this
+                website as part of their CSAD Module. Have fun navigating and
+                marking our website.
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ const AboutUs = () => {
             className="hero-img"
             src={AboutImg}
             alt=""
-            style={{ width: "auto" }}
+            style={{ width: "100dp" }}
           />
         </div>
       </section>

@@ -13,25 +13,25 @@ import {
 const Graphed = () => {
   const data = [
     {
-      name: "2010",
+      name: "2008",
       uv: 4000,
       obesity: 220975,
       amt: 2400,
     },
     {
-      name: "2012",
+      name: "2010",
       uv: 3000,
       obesity: 350464,
       amt: 2210,
     },
     {
-      name: "2014",
+      name: "2012",
       uv: 2000,
       obesity: 339667,
       amt: 2290,
     },
     {
-      name: "2016",
+      name: "2014",
       uv: 2780,
       obesity: 401587,
       amt: 2000,

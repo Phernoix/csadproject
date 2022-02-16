@@ -95,7 +95,10 @@ const AboutUs = () => {
                 <img className="card-top-img" src={Erwin} />
                 <div className="card-body">
                   <h4 className="card-title mb-15">Erwin</h4>
-                  <p>Hi I am Erwin</p>
+                  <p>Hi I am Erwin. I am a health and wellness instructor
+                   as well as a personal trainer for hire. You can hire me
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"> here.</a>
+                  </p>
                 </div>
               </div>
             </div>

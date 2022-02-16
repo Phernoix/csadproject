@@ -78,26 +78,13 @@ export default function App() {
                 </Link>
               </li>
               <li className="option" onClick={closeMobileMenu}>
-                <Link to={"/careers"}>
-                  <p class="text-dark">
-                    <h6>Careers</h6>
-                  </p>
-                </Link>
-              </li>
-              <li className="option" onClick={closeMobileMenu}>
                 <Link to={"/contacted"}>
                   <p class="text-dark">
                     <h6>Contact</h6>
                   </p>
                 </Link>
               </li>
-              <li className="option" onClick={closeMobileMenu}>
-                <Link to={"/subscribed"}>
-                  <p class="text-dark">
-                    <h6>Subscribe</h6>
-                  </p>
-                </Link>
-              </li>
+            
               <li className="option" onClick={closeMobileMenu}>
                 <Link to={"/upload"}>
                   <p class="text-dark">

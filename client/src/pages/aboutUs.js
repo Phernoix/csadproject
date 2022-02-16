@@ -10,6 +10,7 @@ import Footer from "../components/footer";
 import Blog1 from "./../assets/img/blog/blog1.jpg";
 import Blog2 from "./../assets/img/blog/blog2.jpg";
 import Blog3 from "./../assets/img/blog/blog3.jpg";
+import Sqlannounce from "../components/sqlannounce";
 
 const AboutUs = () => {
   const [fullscreen, setFullscreen] = useState({
@@ -142,6 +143,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section> */}
+    
       <div className="pt-5">
         <Footer />
       </div>

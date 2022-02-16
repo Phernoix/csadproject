@@ -32,10 +32,10 @@ app.post('/create', (req,res) =>{
     );
 });
 
-app.post('/create', (req,res) =>{
+app.post('/log', (req,res) =>{
     const announcements = req.body.announcements;
 
-    db.query('SELECT * FROM csad_proj.announcements WHERE id = 1',
+    db.query('SELECT * FROM announcements WHERE id = 1',
     [announcements],
      (err,result) => {
          if (err){

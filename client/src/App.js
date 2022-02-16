@@ -12,7 +12,6 @@ import Subscribed from "./pages/subscribed";
 import TranslateToDe from "./pages/TranslateToDe";
 import TranslateToEn from "./pages/TranslateToEn";
 import Home from "./pages/home";
-import Anm from "./pages/announcements";
 import Stocks from "./components/stocks.js";
 import Covid from "./pages/covid";
 //import { Stocks } from "./stocks";
@@ -97,13 +96,7 @@ export default function App() {
                   </p>
                 </Link>
               </li>
-              <li className="option" onClick={closeMobileMenu}>
-                <Link to={"/announcements"}>
-                  <p class="text-dark">
-                    <h6>announcements</h6>
-                  </p>
-                </Link>
-              </li>
+             
               <li className="option" onClick={closeMobileMenu}>
                 <Link to={"/covid"}>
                   <p class="text-dark">
@@ -152,7 +145,6 @@ export default function App() {
         <Route exact path="/subscribed" component={Subscribed} />
         <Route exact path="/TranslateToDe" component={TranslateToDe} />
         <Route exact path="/TranslateToEn" component={TranslateToEn} />
-        <Route exact path="/announcements" component={Anm} />
         <Route exact path="/covid" component={Covid} />
       </Switch>
     </Router>

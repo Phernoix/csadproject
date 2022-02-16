@@ -72,7 +72,7 @@ export default function App() {
               <li className="option" onClick={closeMobileMenu}>
                 <Link to={"/products"}>
                   <p class="text-dark">
-                    <h6>Products</h6>
+                    <h6>Forum & Tips</h6>
                   </p>
                 </Link>
               </li>

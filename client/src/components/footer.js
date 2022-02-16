@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faGithub, faGithubSquare, faInstagram, faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
 import { faGooglePlusG } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
@@ -19,17 +19,18 @@ const Footer = () => {
                   <h4>About</h4>
                   <ul className="menu-list">
                     <li>
+                      <Link to={"/home"}>Home</Link>
+                    </li>
+                    <li>
                       <Link to={"/about"}>About Us</Link>
                     </li>
                     <li>
-                      <Link to={"/services"}>Services</Link>
+                      <Link to={"/services"}>Vigor</Link>
                     </li>
                     <li>
-                      <Link to={"/products"}>Technologies</Link>
+                      <Link to={"/products"}>Tips</Link>
                     </li>
-                    <li>
-                      <Link to={"/careers"}>Careers</Link>
-                    </li>
+
                   </ul>
                 </div>
               </div>
@@ -37,8 +38,8 @@ const Footer = () => {
                 <div className="single-footer-widget">
                   <h4>Features</h4>
                   <ul className="menu-list">
-                    <li>
-                      <Link to={"/"}>Jobs</Link>
+                  <li>
+                      <Link to={"/upload"}>Upload</Link>
                     </li>
                     {/*                     <li>
                       <Link to={"/"}>Brand Assets</Link>
@@ -47,7 +48,7 @@ const Footer = () => {
                       <Link to={"/"}>Investor Relations</Link>
                     </li> */}
                     <li>
-                      <Link to={"/about"}>Terms of Service</Link>
+                      <Link to={"/logincard"}>Account</Link>
                     </li>
                   </ul>
                 </div>
@@ -67,13 +68,13 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="https://plus.google.com">
-                        <FontAwesomeIcon icon={faGooglePlusG} />
+                      <a href="https://www.instagram.com">
+                        <FontAwesomeIcon icon={faInstagram} />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/in/khaja-mohideen-5834203/">
-                        <FontAwesomeIcon icon={faLinkedinIn} />
+                      <a href="https://github.com/Phernoix">
+                        <FontAwesomeIcon icon={faGithub} />
                       </a>
                     </li>
                   </ul>
@@ -83,15 +84,11 @@ const Footer = () => {
                 <div className="single-footer-widget">
                   <h4>Contact</h4>
                   <ul className="menu-list">
+                    
                     <li>
-                      <Link to={"/careers"}>Join Our Team</Link>
+                      <Link to={"/contacted"}>Give us your feedback</Link>
                     </li>
-                    <li>
-                      <Link to={"/contact"}>Give us your feedback</Link>
-                    </li>
-                    <li>
-                      <Link to={"/about"}>Terms of Service</Link>
-                    </li>
+                    
                   </ul>
                 </div>
               </div>

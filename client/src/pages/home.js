@@ -96,8 +96,17 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5 pt-5">
-        <Vid />
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <iframe
+          width="1020"
+          height="630"
+          src="https://www.youtube.com/embed/wWGulLAa0O0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          
+        ></iframe>
       </div>
       <section className="important-points-section">
         <div className="container">

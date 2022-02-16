@@ -6,15 +6,26 @@
   align-items: center;
   padding: 0px 40px;
   height: 80px;
+  bottom: 0;
 }
 
 .footer {
-  display: flex;
+  /*display: flex;
   background: linear-gradient(#6616fc, #f394d3);
   justify-content: space-between;
   align-items: center;
   padding: 0px 40px;
+  
+  height: flex;*/
+  position: absolute;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  /* Set the fixed height of the footer here */
   height: flex;
+  background: linear-gradient(#6616fc, #f394d3);
+  
 }
 .logo-nav {
   display: flex;

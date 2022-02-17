@@ -26,8 +26,10 @@ const CarouselContainer = () => {
       <Carousel.Item interval={2000}>
         <img className="d-block w-100" src={Blog5} alt="Second slide" />
         <Carousel.Caption>
-          <h3>Learn about sexual wellness today</h3>
-          <p>Having regular sex helps your physical and mental stress</p>
+          <h3>Sleep is an integral part of health </h3>
+          <p>
+            Having regular cycles of sleep helps your physical and mental stress
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={2000}>
@@ -38,7 +40,7 @@ const CarouselContainer = () => {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={2000}>
-        <img className="d-block w-100" src={Blog7} alt="Fourth slide" />
+        <img className="d-block w-100" src={Blog1} alt="Fourth slide" />
         <Carousel.Caption mb-4>
           <h3>Find out how to get fit!</h3>
           <p>Remember to work out at least 150 minutes a week!</p>

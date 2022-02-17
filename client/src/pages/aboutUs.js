@@ -71,8 +71,9 @@ const AboutUs = () => {
                     <h4 className="card-title mb-15">Fazith</h4>
                   </span>
                   <p>
-                    Hi i am Fazith. I am a 2nd year Computer Engineering student
-                    at Singapore Polytechnic. <br />
+                    Hi I am Fazith. Admin no:(P2033147). I am a 2nd year
+                    Computer Engineering student at Singapore Polytechnic.{" "}
+                    <br />
                     <a href="http://www.zithinc.com" target="_blank">
                       Visit my website to know more about me
                     </a>
@@ -87,7 +88,7 @@ const AboutUs = () => {
                   <span>
                     <h4 className="card-title mb-15">Raja</h4>
                   </span>
-                  <p>Hi i am Raja</p>
+                  <p>Hi i am Raja. Admin no:(P2032472)</p>
                 </div>
               </div>
             </div>
@@ -96,9 +97,17 @@ const AboutUs = () => {
                 <img className="card-top-img" src={Erwin} />
                 <div className="card-body">
                   <h4 className="card-title mb-15">Erwin</h4>
-                  <p>Hi I am Erwin. I am a health and wellness instructor
-                   as well as a personal trainer for hire. You can hire me
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"> here.</a>
+                  <p>
+                    Hi I am Erwin. Admin no:(P2002327) I am a health and
+                    wellness instructor as well as a personal trainer for hire.
+                    You can hire me
+                    <a
+                      href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      target="_blank"
+                    >
+                      {" "}
+                      here.
+                    </a>
                   </p>
                 </div>
               </div>
@@ -146,7 +155,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section> */}
-    
+
       <div className="pt-5">
         <Footer />
       </div>
